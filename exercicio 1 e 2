@@ -1,0 +1,33 @@
+#TI
+
+class Estudant():
+    def __init__(self,nome, CPF, anoNascin,matricula):
+        self.nome = nome
+        self.CPF = CPF
+        self.anoNasci = anoNascin
+        self.matricula = matricula
+    def __str__(self):
+        return "nome:"+str(self.nome)+"\n"+"CPF:"+str(self.CPF)+"\n"+"anonasci:"+str(self.anoNasci)+"\n"+"matricula:"+str(self.matricula)
+
+    def Id_aluno(self):
+        if self.matricula in (0,1000):
+            print("Aluno de graduação!")
+        elif self.matricula in (1001,2000):
+            print("Aluno integrado!")
+        elif self.matricula> 2000:
+            print("Aluno do subsequente!")
+nome= input("nome:")
+CPF=float(input("cpf:"))
+anoNascin=int(input("nasci:"))
+matricula=int(input("mat:"))
+
+estudante=Estudant(nome,CPF, anoNascin,matricula)
+
+#TI2
+
+from TI import estudante
+aluno_superior = estudante
+aluno_INTEGRADO = estudante
+
+print(estudante)
+estudante.Id_aluno()
